@@ -1,0 +1,14 @@
+{
+  "SELECTIVEWALLS.name": "Selective Walls",
+  "SELECTIVEWALLS.description": "Walls that are completely absent for chosen players: they do not see them and walk through them. The list is configured on the wall itself as a player dropdown; handling happens locally on each player's client.",
+  "SELECTIVEWALLS.SettingDebugName": "Debug logging",
+  "SELECTIVEWALLS.SettingDebugHint": "Write information about hidden walls and polygon rebuilds to the console.",
+  "SELECTIVEWALLS.FieldsetLabel": "Hidden from these players",
+  "SELECTIVEWALLS.FieldsetHint": "For a player chosen here the wall is completely absent on their client: it is not drawn, its door icon and meshes are hidden, they cannot select or click it, and vision, light, sound and movement pass straight through it. The GM always sees every wall.",
+  "SELECTIVEWALLS.ReadOnlyHint": "You can view the list but not change it: you do not have update permission for this wall.",
+  "SELECTIVEWALLS.GroupUsers": "Players (world users)",
+  "SELECTIVEWALLS.NoneAvailable": "The world has no players besides the GM.",
+  "SELECTIVEWALLS.Unnamed": "(unnamed)",
+  "SELECTIVEWALLS.LegacySaved": "Lists from earlier versions are still honoured: characters {{actors}}, individual tokens {{tokens}}.",
+  "SELECTIVEWALLS.GmNote": "Hiding applies to the chosen user on their own client. A player for whom the wall is hidden cannot select or click it - manage the list as GM."
+}

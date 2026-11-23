@@ -1,0 +1,89 @@
+/* Selective Walls — секция настроек стены в окне конфигурации */
+
+.selective-walls {
+  margin-top: 0.6em;
+}
+
+.selective-walls .sw-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+/* Длинные legacy-списки персонажей и токенов: прокрутка вместо раздувания окна.
+ * Выпадающий список игроков (multi-select) прокрутку группы не получает. */
+.selective-walls .sw-group:has(.sw-row) {
+  max-height: 160px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Выпадающий выбор игроков: штатный элемент ядра <multi-select> и его резервная
+ * версия на нативном <select multiple>. */
+.selective-walls multi-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  margin-top: 0.15em;
+}
+
+.selective-walls multi-select select,
+.selective-walls .sw-group select[multiple] {
+  width: 100%;
+  height: auto;
+  min-height: 2.2em;
+  max-height: 9.5em;
+  overflow-y: auto;
+}
+
+.selective-walls multi-select:disabled,
+.selective-walls .sw-group select[multiple]:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.selective-walls .sw-group h4 {
+  margin: 0.25em 0 0;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.75;
+}
+
+.selective-walls .sw-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  cursor: pointer;
+  padding: 1px 2px;
+}
+
+.selective-walls .sw-row input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  margin: 0;
+  flex: none;
+}
+
+.selective-walls .sw-row span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.selective-walls .sw-hint,
+.selective-walls .sw-note,
+.selective-walls .sw-empty {
+  margin: 0.2em 0;
+  font-size: 0.8em;
+}
+
+/* Внутренняя разметка multi-select (чипы выбранных значений) наследует ширину группы. */
+.selective-walls multi-select > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.selective-walls .sw-group option:checked {
+  font-weight: 600;
+}

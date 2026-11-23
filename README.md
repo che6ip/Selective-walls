@@ -20,7 +20,14 @@
 
 ## Установка
 
-1. Скопируйте папку `selective-walls` в каталог модулей Foundry: `Data/modules/selective-walls`.
+1. Установите модуль одним из способов:
+   - в Foundry VTT откройте **Setup → Add-on Modules → Install Module** и вставьте ссылку на манифест:
+
+     ```
+     https://github.com/che6ip/Selective-walls/releases/latest/download/module.json
+     ```
+
+   - или скопируйте папку `selective-walls` в каталог модулей Foundry: `Data/modules/selective-walls`.
 2. Включите модуль в настройках мира (**Manage Modules**).
 3. Обновите сцену клавишей **F5**.
 
@@ -64,6 +71,7 @@
 
 - Foundry VTT **14** (проверено на сборке 14.369).
 - Для более старых версий модуль не адаптирован.
+- Репозиторий модуля: [che6ip/Selective-walls](https://github.com/che6ip/Selective-walls).
 - Работает на текущем уровне сцены; при переключении уровня состояние пересчитывается заново, а
   списки сохраняются в документах стен.
 - Стена остаётся стеной для всех остальных: Мастер и игроки вне списка видят её, и она блокирует
